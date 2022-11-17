@@ -60,6 +60,7 @@ img {
 }
 
 /*---logo header---*/
+
 .logo {
   display: block;
   font-family: Raleway, sans-serif;
@@ -68,16 +69,15 @@ img {
   line-height: 1.19;
   text-decoration: none;
 }
+
 .logo-header {
   color: var(--title-text-color);
 }
-.logo-header:hover,
-.logo-header:focus {
-  color: var(--accent-color);
-}
+
 .logo-link {
   color: var(--accent-color);
 }
+
 .list {
   padding: 0;
   margin: 0;
