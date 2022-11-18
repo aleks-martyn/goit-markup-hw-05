@@ -13,6 +13,7 @@
 /*---Колір фону тексту картки у секції works rgba(47, 48, 58, 0.8)---*/
 /*---Колір фону оверлею картки секції portfolio rgba(33, 150, 243, 0.9)---*/
 /*---Колір фону backdrop rgba(0, 0, 0, 0.2)---*/
+/*---Колір рамки кнопки модального вікна rgba(0, 0, 0, 0.1)---*/
 
 :root {
   --primary-text-color: #757575;
@@ -31,6 +32,7 @@
   --background-overlay-portfolio-color: rgba(33, 150, 243, 0.9);
   --background-backdrop-color: rgba(0, 0, 0, 0.2);
   --border-close-button-color: rgba(0, 0, 0, 0.1);
+  --tra: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 h1,
@@ -130,7 +132,7 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--tra);
 }
 
 .site-nav .link:hover,
@@ -144,7 +146,7 @@ img {
 }
 
 .site-nav .link.current::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 0;
@@ -351,7 +353,7 @@ img {
 .team-thumb {
   color: var(--social-links-color);
   background-color: var(--white-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--tra), background-color var(--tra);
 }
 
 .team-thumb:hover,
@@ -375,13 +377,14 @@ img {
   letter-spacing: 0.02em;
   text-align: center;
 }
+
 .button.primary {
   display: flex;
   color: var(--primary-text-color);
   font-size: 14px;
   text-decoration: none;
   align-items: center;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--tra);
 }
 
 .button.primary:hover,
@@ -403,7 +406,7 @@ img {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--tra);
 }
 
 .button.secondary:hover,
@@ -434,7 +437,7 @@ img {
   border-color: var(--social-links-color);
   border-radius: 4px;
   cursor: pointer;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--tra), border-color var(--tra);
 }
 
 .client-thumb:hover,
@@ -493,7 +496,7 @@ img {
 .footer-thumb {
   color: var(--white-color);
   background-color: var(--background-footer-icon-color);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--tra);
 }
 
 .footer-thumb:hover,
@@ -521,8 +524,7 @@ img {
   background-color: var(--background-backdrop-color);
   transform: scale(1);
   opacity: 1;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--tra), opacity var(--tra);
 }
 
 .backdrop.is-hidden {
@@ -540,9 +542,7 @@ img {
   height: 581px;
   background-color: var(--white-color);
   border-radius: 4px;
-  box-shadow: 
-    0px 1px 3px rgba(0, 0, 0, 0.12),
-    0px 1px 1px rgba(0, 0, 0, 0.14),
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
@@ -591,19 +591,15 @@ img {
   letter-spacing: 0.03em;
   color: var(--title-text-color);
   background-color: var(--ashen-background-color);
-  transition: 
-  color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--tra), background-color var(--tra),
+    box-shadow var(--tra);
 }
 
 .portfolio-filter .button:hover,
 .portfolio-filter .button:focus {
   color: var(--white-color);
   background-color: var(--accent-color);
-  box-shadow:
-    0px 3px 1px rgba(0, 0, 0, 0.1),
-    0px 1px 2px rgba(0, 0, 0, 0.08),
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
@@ -618,24 +614,23 @@ img {
 .portfolio-link {
   display: block;
   text-decoration: none;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow var(--tra);
 }
 
 .portfolio-link:hover,
 .portfolio-link:focus {
-  box-shadow: 
-    0px 1px 1px rgba(0, 0, 0, 0.12),
-    0px 4px 4px rgba(0, 0, 0, 0.06),
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-link:hover .portfolio-overlay,
 .portfolio-link:focus .portfolio-overlay {
-  opacity: 1;
+  transform: translateY(0);
 }
 
 .portfolio-thumb {
   position: relative;
+  overflow: hidden;
 }
 
 .portfolio-overlay {
@@ -645,7 +640,8 @@ img {
   height: 100%;
   padding: 63px 24px;
   background-color: var(--background-overlay-portfolio-color);
-  opacity: 0;
+  transform: translateY(100%);
+  transition: transform var(--tra);
 }
 
 .overlay-text {
