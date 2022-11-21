@@ -49,7 +49,6 @@ body {
   background-color: var(--white-color);
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
-  overflow:hidden;
 }
 
 img {
@@ -531,6 +530,10 @@ img {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .modal {
