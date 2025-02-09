@@ -505,10 +505,10 @@ img {
   background-color: var(--accent-color);
 }
 
-.footer-subtitle {
+.footer-slogan {
   margin-bottom: 20px;
   color: var(--white-color);
-  font-family: Roboto;
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.17;
   text-transform: uppercase;
