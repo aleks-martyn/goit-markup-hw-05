@@ -2,16 +2,15 @@
 <html lang="uk">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
     />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
@@ -21,38 +20,42 @@
 
     <header class="page-header">
       <div class="container header-container">
-        <nav class="logo-nav">
-          <a href="./index.html" class="logo-header logo"
-            ><span class="logo-link">Web</span>Studio</a
+        <nav class="site-nav">
+          <a class="logo header-logo" href="./index.html"
+            ><span class="logo-accent">Web</span>Studio</a
           >
 
-          <ul class="site-nav list">
-            <li class="item"><a href="./index.html" class="link">Студія</a></li>
-
+          <ul class="nav-list">
             <li class="item">
-              <a href="./portfolio.html" class="link current">Портфоліо</a>
+              <a class="header-link nav-link" href="./index.html">Студія</a>
             </li>
 
             <li class="item">
-              <a href="./index.html" class="link">Контакти</a>
+              <a class="header-link nav-link current" href="./portfolio.html"
+                >Портфоліо</a
+              >
+            </li>
+
+            <li class="item">
+              <a class="header-link nav-link" href="./index.html">Контакти</a>
             </li>
           </ul>
         </nav>
 
-        <ul class="contacts list">
+        <ul class="contacts">
           <li class="item">
-            <a href="mailto:info@devstudio.com" class="button primary link">
-              <svg class="button-icon icon" width="16" height="12">
-                <use href="./images/symbol-defs.svg#icon-envelope"></use>
+            <a class="header-link" href="mailto:info@devstudio.com">
+              <svg class="icon" width="16" height="12">
+                <use href="./images/icons.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com</a
             >
           </li>
 
           <li class="item">
-            <a href="tel:+380961111111" class="button primary link">
-              <svg class="button-icon icon" width="10" height="16">
-                <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+            <a class="header-link" href="tel:+380961111111">
+              <svg class="icon" width="10" height="16">
+                <use href="./images/icons.svg#icon-smartphone"></use>
               </svg>
               +38 096 111 11 11</a
             >
@@ -62,7 +65,7 @@
     </header>
 
     <main>
-      <!--Портфоліо-->
+      <!-- Портфоліо -->
 
       <section class="portfolio-section section">
         <div class="container">
@@ -89,7 +92,7 @@
             </li>
           </ul>
 
-          <!--portfolio-list-->
+          <!-- portfolio-list -->
 
           <ul class="portfolio-list list">
             <li class="portfolio-item">
@@ -353,7 +356,7 @@
       </section>
     </main>
 
-    <!--Футер-->
+    <!-- Футер -->
 
     <footer class="page-footer">
       <div class="container footer-container">
