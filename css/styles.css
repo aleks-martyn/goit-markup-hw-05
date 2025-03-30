@@ -362,13 +362,12 @@ ul {
 
 /* ---team--- */
 
-.team.list {
+.team-list {
   display: flex;
   gap: 30px;
 }
 
-.team .item {
-  flex-basis: calc((100%-90px) / 4);
+.team-card {
   border-right: 1px solid var(--primary-border-color);
   border-bottom: 1px solid var(--primary-border-color);
   border-left: 1px solid var(--primary-border-color);
@@ -377,19 +376,19 @@ ul {
   box-shadow: var(--team-item-shadow);
 }
 
-.title-text {
+.inner-wrap {
   padding-top: 30px;
   padding-bottom: 30px;
   text-align: center;
   background-color: var(--primary-bg-color);
 }
 
-.team-title {
+.team-subtitle {
   margin-bottom: 10px;
-  color: var(--title-text-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
+  color: var(--title-text-color);
 }
 
 .team-text {
@@ -398,16 +397,10 @@ ul {
   line-height: 1.19;
 }
 
-.thumb {
+.team-socials {
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 0;
-  border: 0;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  cursor: pointer;
+  gap: 10px;
 }
 
 .team-thumb {
@@ -420,12 +413,6 @@ ul {
 .team-thumb:focus {
   color: var(--primary-bg-color);
   background-color: var(--accent-color);
-}
-
-.team-soc.list {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
 }
 
 /* ---buttons--- */
@@ -472,28 +459,29 @@ ul {
 
 /* ---clients--- */
 
-.clients.list {
+.clients {
   display: flex;
   gap: 30px;
-  justify-content: center;
 }
 
-.client-thumb {
+.client-item {
+  flex-basis: calc((100% - 5 * 30px) / 6);
+}
+
+.client-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
   height: 92px;
   color: var(--social-link-color);
-  border: 1px solid;
-  border-color: var(--social-link-color);
+  border: 1px solid var(--social-link-color);
   border-radius: 4px;
   cursor: pointer;
   transition: color var(--tra), border-color var(--tra);
 }
 
-.client-thumb:hover,
-.client-thumb:focus {
+.client-link:hover,
+.client-link:focus {
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
@@ -592,16 +580,18 @@ ul {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scaleY(1);
+  opacity: 1;
   width: 528px;
   height: 581px;
   background-color: var(--primary-bg-color);
   border-radius: 4px;
   box-shadow: var(--modal-shadow);
-  transition: transform var(--tra);
+  transition: transform var(--tra), opacity var(--tra);
 }
 
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scaleY(0);
+  opacity: 0;
 }
 
 .modal-close-button {
